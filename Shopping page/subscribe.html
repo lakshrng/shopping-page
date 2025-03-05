@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0f0f0f;
+            font-family: 'Roboto';
+        }
+        .signup-box {
+            width: 360px;
+            height: 620px;
+            margin: auto;
+            background-color: #f2c069;
+            border-radius: 3px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            padding-top: 15px;
+        }
+        form {
+            width: 300px;
+            margin-left: 20px;
+        }
+        form label {
+            display: flex;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        form input {
+            width: 100%;
+            padding: 7px;
+            background-color: #373430;
+            color: white;
+            border: none;
+            border: 1px solid gray;
+            border-radius: 6px;
+            outline: none;
+        }
+        span {
+            color: red;
+        }
+        .signup-box button {
+            background-color: rgb(46, 186, 146);
+            color: black;
+            width: 100px;
+            height: 50px;
+            margin-top: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+        }
+        .signup-box p {
+            width: 320px;
+            height: 35px;
+            margin-top: 30px;
+            margin-left: 20px;
+            border: none;
+            background-color: #f2c069;
+            color: black;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+        <h1>Subscribe</h1>
+        <form id="signup-form" onsubmit="return validateForm()">
+            <label>First Name<span>*</span></label>
+            <input type="text" id="first-name" required>
+            <label>Last Name</label>
+            <input type="text" id="last-name">
+            <label>Email<span>*</span></label>
+            <input type="email" id="email" required>
+            <label>Password<span>*</span></label>
+            <input type="password" id="password" required minlength="6">
+            <label>Confirm Password<span>*</span></label>
+            <input type="password" id="confirm-password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>By clicking the Sign Up button, you agree to our<br>
+            <a href="#">Terms and Conditions</a> and <a href="#">Policy and Privacy</a>
+        </p>
+    </div>
+    <script>
+        function validateForm() {
+            var fname = document.getElementById("first-name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var password = document.getElementById("password").value;
+            var cpass = document.getElementById("confirm-password").value;
+
+            if (fname === "" || email === "" || password === "" || cpass === "") {
+                alert("Please fill out all required fields.");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            if (password !== cpass) {
+                alert("Passwords do not match!");
+                return false;
+            }
+
+            var submitt = confirm("Are you sure you want to sign up?");
+            if (submitt) {
+                alert("Sign up successful!");
+                document.getElementById("signup-form").reset();
+                return false;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
