@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E shop</title>
     <link rel="stylesheet" href="homestyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="top-bar">
@@ -22,19 +24,16 @@
     </header>
     <hr>
 
-
     <section class="hero">
         <h1>Welcome to Our Online Store!</h1>
         <p>Browse products and manage your shopping cart easily.</p>
     </section>
     <hr>
 
-
     <nav class="navbar">
         <ul>
             <li><a href="shopping cart.html">Shopping Cart</a></li>
             <li><a href="#">Product Catalog</a></li>
-            
         </ul>
     </nav>
     <hr>
@@ -47,28 +46,64 @@
                 <h3>E.Irodov Problems on Physics</h3>
                 <br>
                 <p>₹1099</p>
-                <button>Add to Cart</button>
+                <br>
+                <a href="shopping cart.html" class="add-to-cart-button">Add to Cart</a>
             </div>
             <div class="product-item">
                 <img src="https://p1-ofp.static.pub//fes/cms/2025/02/17/gqqhsfks155sz2453m4nqpvq0s43nj237979.png" alt="Product Image">
                 <h3>Lenovo A15 newgen Laptop</h3>
                 <br>
                 <p>₹63,099</p>
-                <button>Add to Cart</button>
+                <br>
+                <a href="shopping cart.html" class="add-to-cart-button">Add to Cart</a>
             </div>
             <div class="product-item">
                 <img src="https://www.bhphotovideo.com/images/images2500x2500/apple_mj3t2ll_a_watch_sport_smartwatch_42mm_1187199.jpg" alt="Product Image">
                 <h3>ASUS smart watch with Advanced features</h3>
                 <br>
                 <p>₹7520</p>
-                <button>Add to Cart</button>
+                <br>
+                <a href="shopping cart.html" class="add-to-cart-button">Add to Cart</a>
             </div>
         </div>
     </section>
 
-
     <footer>
         <p>&copy; 2025 Shopping Cart Inc.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </footer>
+
+    <style>
+        .social-media {
+            margin-top: 10px;
+        }
+        .social-media a {
+            margin: 0 15px;
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+        }
+        .social-media a:hover {
+            color: #0073e6; 
+        }
+
+        .add-to-cart-button {
+            background-color: #f2c069;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .add-to-cart-button:hover {
+            background-color: #218838;
+        }
+    </style>
 </body>
 </html>
+
